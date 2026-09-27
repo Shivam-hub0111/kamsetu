@@ -1,0 +1,244 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KaamSetu</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7f7;color:#17212b;font-family:system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(135deg,#087f72,#075e56);color:white;padding:18px 18px 26px;border-radius:0 0 28px 28px}.wrap{max-width:920px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center}.logo{font-size:21px;font-weight:900}.demo{font-size:11px;background:#ffffff22;padding:7px 10px;border-radius:20px}.who{display:flex;align-items:center;gap:8px;font-size:12px}.whoname{background:#ffffff22;padding:7px 11px;border-radius:20px;font-weight:700}.logout{background:transparent;border:1px solid #ffffff55;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px}h1{font-size:29px;line-height:1.1;margin:22px 0 7px}.sub{font-size:13px;opacity:.9}.search{margin-top:17px;background:#fff;border-radius:15px;padding:13px;display:flex;gap:8px}.search input{width:100%;border:0;outline:0;font:inherit}main{padding:18px}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.trust div,.card,.banner{background:#fff;border:1px solid #e5e9eb;border-radius:16px}.trust div{text-align:center;padding:11px}.trust b{display:block;font-size:14px}.trust span,.meta,.muted{font-size:11px;color:#737d86}.title{display:flex;justify-content:space-between;align-items:center;margin:18px 0 10px}.title h2{margin:0;font-size:18px}.chips{display:flex;gap:8px;overflow:auto}.chip{border:1px solid #dce2e3;background:#fff;padding:9px 13px;border-radius:22px;white-space:nowrap;font-size:12px}.chip.active{background:#087f72;color:#fff}.filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:11px 0}.filters select{padding:10px;border:1px solid #dce2e3;border-radius:11px;background:#fff}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:12px}.card{padding:15px;box-shadow:0 5px 16px #17212b09}.profile{display:flex;gap:11px}.avatar{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:900;flex-shrink:0}.name{font-weight:800}.verify{color:#087a42;font-size:11px;font-weight:750}.new{color:#a1660b;font-size:11px;font-weight:750}.rating{font-size:12px;margin:11px 0}.trustbadge{float:right;background:#eafaf4;color:#087a58;padding:5px 8px;border-radius:8px;font-size:10px;font-weight:800}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{background:#eaf7f5;color:#08756b;padding:5px 8px;border-radius:8px;font-size:10px}.price{font-size:17px;font-weight:900;margin-top:12px}.price span{font-size:10px;color:#77818b;font-weight:500}.actions{display:flex;gap:7px;margin-top:12px}.btn{flex:1;border:0;border-radius:10px;padding:10px;font-weight:750;cursor:pointer}.primary{background:#087f72;color:#fff}.secondary{background:#edf0f1}.banner{margin-top:15px;padding:13px;font-size:12px;line-height:1.5}.empty{text-align:center;background:white;border-radius:16px;padding:30px;color:#737d86}.bg{display:none;position:fixed;inset:0;background:#10182088;z-index:5;align-items:flex-end;padding:14px}.modal{width:100%;max-width:540px;margin:auto;background:#fff;border-radius:24px 24px 12px 12px;padding:19px;max-height:90vh;overflow:auto}.close{float:right;border:0;border-radius:50%;width:31px;height:31px;cursor:pointer}.modal input,.modal textarea,.modal select{width:100%;padding:11px;margin:6px 0;border:1px solid #dce2e3;border-radius:10px;font:inherit}label.f{font-size:11px;font-weight:700;color:#4a5560;margin-top:8px;display:block}.slots{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.slot{padding:8px 10px;border:1px solid #d6dddf;border-radius:9px;font-size:11px;cursor:pointer}.slot.sel{background:#087f72;color:white}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:13px 0}.stats div{background:#f3f6f6;padding:10px;text-align:center;border-radius:10px;font-size:10px}.stats b{display:block;font-size:15px}.bar{height:7px;background:#e6ebeb;border-radius:8px;margin:5px 0 12px;overflow:hidden}.bar i{display:block;height:100%;background:#087f72}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#17212b;color:white;padding:12px 17px;border-radius:12px;display:none;z-index:20;font-size:12px}footer{text-align:center;padding:25px;color:#8a949b;font-size:10px}
+.onboard{position:fixed;inset:0;background:linear-gradient(135deg,#087f72,#075e56);z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.obox{background:#fff;border-radius:22px;max-width:420px;width:100%;padding:24px;max-height:92vh;overflow:auto}.obox h2{margin:0 0 4px}.obox .sub{color:#5b6670;font-size:13px;margin-bottom:16px}.rolepick{display:flex;flex-direction:column;gap:10px}.rolebtn{border:2px solid #e5e9eb;background:#fafcfc;border-radius:16px;padding:16px;text-align:left;cursor:pointer;font:inherit}.rolebtn b{display:block;font-size:15px;margin-bottom:3px}.rolebtn span{font-size:12px;color:#737d86}.rolebtn:hover{border-color:#087f72}.back{background:none;border:0;color:#087f72;font-weight:700;font-size:12px;margin-bottom:8px;cursor:pointer;padding:0}
+.dash{background:#fff;border:1px solid #e5e9eb;border-radius:16px;padding:16px;margin-top:16px}.dash .stats{margin-top:14px}.hint{font-size:11px;color:#8a949b;margin-top:10px;line-height:1.5}
+</style></head><body>
+
+<div class="onboard" id="onboard">
+  <div class="obox" id="obox"></div>
+</div>
+
+<header><div class="wrap"><div class="top"><div class="logo">🔧 KaamSetu</div>
+<div class="who" id="whoBox" style="display:none"><span class="whoname" id="whoName"></span><button class="logout" onclick="logout()">Switch</button></div>
+<div class="demo" id="demoTag">HACKATHON DEMO</div>
+</div>
+<div id="custHeader"><h1>Local skills.<br>Trusted nearby.</h1><div class="sub">Discover skilled people in your city, compare them fairly and book with confidence.</div><div class="search">🔎 <input id="q" oninput="render()" placeholder="Search haircut, tailoring, repair, cleaning..."></div></div>
+<div id="sellHeader" style="display:none"><h1 id="sellGreet">Welcome back.</h1><div class="sub">Manage the profile customers see, and track your visibility.</div></div>
+</div></header>
+
+<main class="wrap">
+<div id="custView">
+<div class="trust"><div>🛡️<b>Verified</b><span>Identity & skill checks</span></div><div>💸<b>Fair pricing</b><span>Transparent rates</span></div><div>📍<b>Local first</b><span>Nearby workers</span></div></div>
+<div class="title"><h2>Find a local expert</h2><span class="muted" id="count"></span></div><div class="chips" id="chips"></div>
+<div class="filters" style="grid-template-columns:1fr"><select id="cityFilter" onchange="render()"><option value="">All cities</option></select></div>
+<div class="filters"><select id="distance" onchange="render()"><option value="">Any distance</option><option value="2">Within 2 km</option><option value="5">Within 5 km</option><option value="10">Within 10 km</option></select><select id="price" onchange="render()"><option value="">Any price</option><option value="300">Under ₹300</option><option value="500">Under ₹500</option><option value="800">Under ₹800</option></select></div>
+<div class="title"><h2>Recommended near you</h2><span class="muted">Trust + distance</span></div><div class="cards" id="cards"></div>
+<div class="banner"><b>💡 What makes KaamSetu different?</b><br>Workers build a digital reputation they can own: verified skills, portable reviews, transparent pricing and repeat customers — not just a marketplace listing.</div>
+</div>
+
+<div id="sellView" style="display:none">
+  <div class="title"><h2>Your public profile</h2><span class="muted" id="sellStatus"></span></div>
+  <div class="cards" id="sellCardWrap"></div>
+  <div class="dash">
+    <b>Visibility & performance (demo data)</b>
+    <div class="stats"><div><b id="stViews">0</b>Profile views</div><div><b id="stLeads">0</b>Booking requests</div><div><b id="stTrust">0%</b>Trust score</div></div>
+    <div class="hint">In the full product this updates from real customer activity. Trust score rises as you complete identity/skill verification and collect reviews.</div>
+    <button class="btn secondary" style="margin-top:12px;width:100%" onclick="editSeller()">Edit my profile</button>
+  </div>
+  <div class="banner" style="margin-top:16px"><b>💡 Why sellers join KaamSetu</b><br>One verified profile, no repeated paperwork, and direct visibility to nearby customers searching for your exact skill.</div>
+</div>
+
+</main>
+<footer>KaamSetu • Demo profiles & bookings • No real payments</footer>
+<div class="bg" id="bg"><div class="modal"><button class="close" onclick="closeM()">×</button><div id="mc"></div></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const baseWorkers=[
+{id:1,n:"Ravi Kumar",job:"Barber",area:"Sector 62, Noida",km:1.2,skills:["Haircut","Beard Styling","Home Service"],price:199,rating:4.9,reviews:126,trust:98,exp:"8 yrs",color:"#2563eb",lang:"Hindi • English",bio:"8 years of experience in clean fades, beard styling and punctual home visits.",times:["10:00 AM","1:00 PM","5:30 PM"],review:"Very professional and exactly on time. — Aman",city:"Noida (NCR)"},
+{id:2,n:"Meena Tailors",job:"Tailor & Alteration",area:"Sector 50, Noida",km:2.4,skills:["Stitching","Alterations","Blouse Design"],price:299,rating:4.8,reviews:89,trust:96,exp:"12 yrs",color:"#be185d",lang:"Hindi • Punjabi",bio:"Specialist in alterations, blouse fitting and custom stitching.",times:["11:00 AM","2:00 PM","6:00 PM"],review:"Perfect fitting and delivered before the promised date. — Neha",city:"Noida (NCR)"},
+{id:3,n:"Imran Auto Care",job:"Car Cleaning",area:"Sector 15, Noida",km:3.1,skills:["Car Wash","Interior Cleaning","Polish"],price:399,rating:4.9,reviews:74,trust:97,exp:"7 yrs",color:"#0f766e",lang:"Hindi • English",bio:"Mobile car-care specialist who brings equipment to your doorstep.",times:["9:00 AM","12:30 PM","4:00 PM"],review:"My car looked brand new. Great doorstep service. — Rahul",city:"Noida (NCR)"},
+{id:4,n:"Pooja Beauty Studio",job:"Beauty & Makeup",area:"Indirapuram",km:4.2,skills:["Makeup","Hair Styling","Facial"],price:599,rating:4.8,reviews:112,trust:95,exp:"6 yrs",color:"#9333ea",lang:"Hindi • English",bio:"Certified beauty professional offering salon-style services at home.",times:["10:30 AM","2:30 PM","6:30 PM"],review:"Loved the service and she understood exactly what I wanted. — Simran",city:"Noida (NCR)"},
+{id:5,n:"Suresh Electric Works",job:"Electrician",area:"Sector 12, Noida",km:2.0,skills:["Wiring","Fan Repair","Appliance Repair"],price:250,rating:4.7,reviews:63,trust:94,exp:"15 yrs",color:"#ea580c",lang:"Hindi",bio:"15 years of local electrical repair experience. Emergency visits available.",times:["8:00 AM","1:30 PM","7:00 PM"],review:"Fixed the issue quickly and explained the problem clearly. — Vijay",city:"Noida (NCR)"},
+{id:6,n:"Lakshmi Repair Hub",job:"Electronics Repair",area:"Sector 18, Noida",km:5.7,skills:["Phone Repair","Laptop Repair","Diagnostics"],price:350,rating:4.8,reviews:51,trust:93,exp:"9 yrs",color:"#0891b2",lang:"Hindi • English",bio:"Independent repair specialist with transparent diagnosis before repair.",times:["11:30 AM","3:00 PM","7:30 PM"],review:"No unnecessary charges. He showed me the damaged part first. — Karan",city:"Noida (NCR)"},
+{id:7,n:"Vikas HomeFix",job:"Plumber & Handyman",area:"Vaishali",km:6.8,skills:["Plumbing","Furniture Fix","Drilling"],price:300,rating:4.7,reviews:45,trust:92,exp:"10 yrs",color:"#475569",lang:"Hindi",bio:"One-call home repair for small plumbing and handyman jobs.",times:["9:30 AM","2:00 PM","5:00 PM"],review:"Quick response and reasonable pricing. — Ritu",city:"Noida (NCR)"}];
+const cats=["All","Hair & Beauty","Tailoring","Cleaning","Repair","Electrical","Electronics"],map={"Hair & Beauty":["Barber","Beauty"],"Tailoring":["Tailor"],"Cleaning":["Cleaning"],"Repair":["Repair","Handyman"],"Electrical":["Electrician"],"Electronics":["Electronics"]};
+const CITIES=["Noida (NCR)","Jaipur","Lucknow","Indore","Coimbatore"];
+function W(id,n,job,city,area,km,skills,price,rating,reviews,trust,exp,color,bio,review){return{id,n,job,area:area+", "+city,city,km,skills,price,rating,reviews,trust,exp,color,lang:"Hindi • English",bio,times:["10:00 AM","1:00 PM","5:00 PM"],review}}
+baseWorkers.push(
+W(101,"Devendra Hair Studio","Barber","Jaipur","Malviya Nagar",1.8,["Haircut","Beard Styling"],179,4.7,58,93,"6 yrs","#2563eb","Neighbourhood barber known for quick, tidy fades.","Great haircut and very affordable. — Yash"),
+W(102,"Kavita Stitching Works","Tailor & Alteration","Jaipur","C-Scheme",3.0,["Stitching","Alterations"],259,4.6,42,91,"9 yrs","#be185d","Reliable alterations and custom stitching, delivered on time.","Fitting was perfect. — Ritika"),
+W(103,"Rajesh Auto Shine","Car Cleaning","Jaipur","Vaishali Nagar",2.5,["Car Wash","Interior Cleaning"],349,4.7,37,90,"5 yrs","#0f766e","Doorstep car wash and detailing with eco-friendly products.","Car looked spotless after the wash. — Manoj"),
+W(104,"Anjali Beauty Point","Beauty & Makeup","Jaipur","Raja Park",4.0,["Makeup","Facial","Hair Styling"],499,4.8,66,94,"7 yrs","#9333ea","Home salon services for makeup, facials and styling.","Very skilled and gentle with the facial. — Divya"),
+W(105,"Mahesh Electricals","Electrician","Jaipur","Mansarovar",2.2,["Wiring","Fan Repair"],220,4.6,29,89,"11 yrs","#ea580c","Local electrician for wiring faults and appliance fixes.","Fixed the short circuit fast. — Sanjay"),
+W(106,"Om Prakash HomeFix","Plumber & Handyman","Jaipur","Jagatpura",5.1,["Plumbing","Furniture Fix"],280,4.5,24,88,"8 yrs","#475569","One-call handyman for leaks, taps and small repairs.","Solved a stubborn leak in minutes. — Kiran"),
+W(201,"Salim Hair Salon","Barber","Lucknow","Hazratganj",1.5,["Haircut","Beard Styling"],189,4.8,71,95,"10 yrs","#2563eb","Classic and modern haircuts with home-visit convenience.","Best fade I've had in the city. — Zeeshan"),
+W(202,"Farha Tailoring","Tailor & Alteration","Lucknow","Aminabad",2.8,["Stitching","Blouse Design"],249,4.7,38,92,"14 yrs","#be185d","Chikankari-friendly tailoring and precise alterations.","Beautiful stitching, very patient with changes. — Sana"),
+W(203,"Naveen Car Spa","Car Cleaning","Lucknow","Gomti Nagar",3.4,["Car Wash","Polish"],379,4.6,33,90,"6 yrs","#0f766e","Mobile car spa with wash, polish and vacuuming.","Quick, thorough and reasonably priced. — Abhay"),
+W(204,"Shalini Glow Studio","Beauty & Makeup","Lucknow","Indira Nagar",2.0,["Makeup","Hair Styling"],549,4.9,84,96,"8 yrs","#9333ea","Bridal and party makeup specialist with home visits.","She made the bride look stunning. — Pooja"),
+W(205,"Ajay Gadget Care","Electronics Repair","Lucknow","Alambagh",4.6,["Phone Repair","Laptop Repair"],320,4.6,27,88,"7 yrs","#0891b2","Screen, battery and diagnostic repairs with honest pricing.","Told me exactly what was wrong before fixing. — Rohit"),
+W(206,"Irfan Home Services","Plumber & Handyman","Lucknow","Chowk",3.9,["Plumbing","Drilling"],260,4.5,19,87,"9 yrs","#475569","Handles plumbing, drilling and small fittings same-day.","Came within the hour and fixed it. — Alok"),
+W(301,"Deepak Style Studio","Barber","Indore","Vijay Nagar",1.9,["Haircut","Beard Styling"],169,4.7,54,92,"7 yrs","#2563eb","Trendy cuts and beard grooming at your doorstep.","Very neat work, on time as promised. — Nitin"),
+W(302,"Sunita Fashion Point","Tailor & Alteration","Indore","Sapna Sangeeta",2.6,["Stitching","Alterations"],239,4.6,31,90,"11 yrs","#be185d","Custom blouses, alterations and everyday stitching.","Delivered early and fit perfectly. — Anita"),
+W(303,"Manish Shine Auto","Car Cleaning","Indore","Bhawarkuan",3.7,["Car Wash","Interior Cleaning"],359,4.7,29,90,"5 yrs","#0f766e","Doorstep car detailing with interior deep cleaning.","My car interior looks brand new. — Saurabh"),
+W(304,"Priya Makeover Studio","Beauty & Makeup","Indore","Palasia",2.3,["Makeup","Facial"],479,4.8,61,93,"6 yrs","#9333ea","Certified beautician offering facials and party makeup.","Loved the makeup, very natural look. — Komal"),
+W(305,"Ramesh Electric Care","Electrician","Indore","Rajwada",4.1,["Wiring","Appliance Repair"],230,4.6,26,89,"13 yrs","#ea580c","Experienced electrician for home wiring and appliances.","Explained the issue clearly and fixed it. — Deepak"),
+W(306,"Vivek Tech Fix","Electronics Repair","Indore","Bengali Square",5.0,["Phone Repair","Diagnostics"],300,4.5,22,87,"6 yrs","#0891b2","Transparent diagnosis before any phone or laptop repair.","No hidden charges, showed me the part. — Ankit"),
+W(401,"Muthu Hair Studio","Barber","Coimbatore","RS Puram",1.6,["Haircut","Beard Styling"],179,4.8,63,94,"9 yrs","#2563eb","Skilled barber offering classic cuts and grooming.","Consistently good haircuts every time. — Arun"),
+W(402,"Kalaivani Tailors","Tailor & Alteration","Coimbatore","Gandhipuram",2.9,["Stitching","Blouse Design"],249,4.7,40,91,"12 yrs","#be185d","Expert in blouse stitching and quick alterations.","Perfect fit, very reasonable rates. — Priyanka"),
+W(403,"Senthil Auto Clean","Car Cleaning","Coimbatore","Peelamedu",3.3,["Car Wash","Polish"],369,4.6,31,90,"6 yrs","#0f766e","Doorstep car wash and polish with modern equipment.","Efficient and careful with the car. — Vignesh"),
+W(404,"Lakshmi Beauty Parlour","Beauty & Makeup","Coimbatore","Saibaba Colony",2.1,["Makeup","Hair Styling","Facial"],519,4.9,77,95,"8 yrs","#9333ea","Full home-salon services including bridal packages.","Extremely talented and warm. — Divya"),
+W(405,"Suresh Power Works","Electrician","Coimbatore","Ramanathapuram",3.6,["Wiring","Fan Repair"],210,4.6,24,88,"10 yrs","#ea580c","Local electrician for household wiring and fan repairs.","Quick response, fair pricing. — Bala"),
+W(406,"Karthik HomeFix","Plumber & Handyman","Coimbatore","Singanallur",4.4,["Plumbing","Furniture Fix"],270,4.5,20,87,"7 yrs","#475569","Handyman for plumbing leaks and furniture fixes.","Sorted the leak same day. — Meena")
+);
+const jobOptions=["Barber","Beauty & Makeup","Tailor & Alteration","Car Cleaning / House Cleaning","Electrician","Electronics Repair","Plumber & Handyman","Other local service"];
+const colors=["#2563eb","#be185d","#0f766e","#9333ea","#ea580c","#0891b2","#475569","#a1660b","#16a34a","#7c3aed"];
+let cat="All";
+document.getElementById("cityFilter").innerHTML+=CITIES.map(c=>`<option>${c}</option>`).join("");
+
+/* ---------- account / onboarding ---------- */
+function getUser(){try{return JSON.parse(localStorage.getItem("ks_user")||"null")}catch(e){return null}}
+function saveUser(u){localStorage.setItem("ks_user",JSON.stringify(u))}
+function getSellers(){try{return JSON.parse(localStorage.getItem("ks_sellers")||"[]")}catch(e){return[]}}
+function saveSellers(l){localStorage.setItem("ks_sellers",JSON.stringify(l))}
+function allWorkers(){return baseWorkers.concat(getSellers())}
+
+function boot(){
+  const u=getUser();
+  if(!u){showRolePick();return}
+  enterApp(u);
+}
+function showRolePick(){
+  document.getElementById("onboard").style.display="flex";
+  document.getElementById("obox").innerHTML=`
+    <h2>Welcome to KaamSetu</h2>
+    <div class="sub">One quick profile — you won't have to re-enter it again. Are you here to book help, or to offer your skills?</div>
+    <div class="rolepick">
+      <button class="rolebtn" onclick="roleForm('customer')"><b>👤 I'm a Customer</b><span>Find and book verified local workers near me</span></button>
+      <button class="rolebtn" onclick="roleForm('seller')"><b>🛠️ I'm a Service Provider</b><span>Create my skill profile and get discovered nearby</span></button>
+    </div>`;
+}
+function roleForm(role){
+  if(role==="customer"){
+    document.getElementById("obox").innerHTML=`
+      <button class="back" onclick="showRolePick()">← Back</button>
+      <h2>Create your customer profile</h2>
+      <div class="sub">Saved on this device so you never retype your address.</div>
+      <label class="f">Full name</label><input id="f_name" placeholder="e.g. Aman Sharma">
+      <label class="f">Phone number</label><input id="f_phone" placeholder="10-digit mobile number">
+      <label class="f">City</label><select id="f_city">${CITIES.map(c=>`<option>${c}</option>`).join("")}</select>
+      <label class="f">Locality / area</label><input id="f_locality" placeholder="e.g. Sector 62">
+      <label class="f">Full address</label><textarea id="f_addr" rows="2" placeholder="House / flat, street, landmark"></textarea>
+      <button class="btn primary" style="width:100%;margin-top:12px" onclick="submitCustomer()">Continue</button>`;
+  } else {
+    document.getElementById("obox").innerHTML=`
+      <button class="back" onclick="showRolePick()">← Back</button>
+      <h2>Create your worker profile</h2>
+      <div class="sub">This is what customers will see when they search nearby.</div>
+      <label class="f">Full name / business name</label><input id="f_name" placeholder="e.g. Ravi Kumar">
+      <label class="f">Phone number</label><input id="f_phone" placeholder="10-digit mobile number">
+      <label class="f">Primary skill / category</label><select id="f_job">${jobOptions.map(j=>`<option>${j}</option>`).join("")}</select>
+      <label class="f">City</label><select id="f_city">${CITIES.map(c=>`<option>${c}</option>`).join("")}</select>
+      <label class="f">Locality / area</label><input id="f_locality" placeholder="e.g. Sector 18">
+      <label class="f">Starting price (₹)</label><input id="f_price" type="number" placeholder="e.g. 250">
+      <label class="f">Short bio</label><textarea id="f_bio" rows="2" placeholder="Experience, specialties, availability"></textarea>
+      <button class="btn primary" style="width:100%;margin-top:12px" onclick="submitSeller()">Continue</button>`;
+  }
+}
+function submitCustomer(){
+  const name=document.getElementById("f_name").value.trim(),phone=document.getElementById("f_phone").value.trim(),city=document.getElementById("f_city").value,locality=document.getElementById("f_locality").value.trim(),addr=document.getElementById("f_addr").value.trim();
+  if(!name||!phone){toastMsg("Please fill name and phone");return}
+  const u={role:"customer",name,phone,city,locality,addr};
+  saveUser(u);document.getElementById("onboard").style.display="none";enterApp(u);
+}
+function submitSeller(){
+  const name=document.getElementById("f_name").value.trim(),phone=document.getElementById("f_phone").value.trim(),job=document.getElementById("f_job").value,city=document.getElementById("f_city").value,locality=document.getElementById("f_locality").value.trim(),price=Number(document.getElementById("f_price").value)||299,bio=document.getElementById("f_bio").value.trim();
+  if(!name||!phone){toastMsg("Please fill name and phone");return}
+  const seller={id:9000+Math.floor(Math.random()*900),n:name,job,city,locality,area:(locality?locality+", ":"")+city,km:(Math.random()*4+0.5).toFixed(1)*1,skills:[job.split(" ")[0]],price,rating:0,reviews:0,trust:60,exp:"New",color:colors[Math.floor(Math.random()*colors.length)],lang:"—",bio:bio||"New KaamSetu provider.",times:["10:00 AM","2:00 PM","5:00 PM"],review:"",isNew:true};
+  const list=getSellers();list.push(seller);saveSellers(list);
+  const u={role:"seller",name,phone,city,locality,sellerId:seller.id,views:Math.floor(Math.random()*40)+10,leads:Math.floor(Math.random()*5)};
+  saveUser(u);document.getElementById("onboard").style.display="none";enterApp(u);
+}
+function logout(){localStorage.removeItem("ks_user");location.reload()}
+
+function enterApp(u){
+  document.getElementById("whoBox").style.display="flex";
+  document.getElementById("whoName").textContent=(u.role==="seller"?"🛠️ ":"👤 ")+u.name.split(" ")[0];
+  if(u.role==="customer"){
+    document.getElementById("custHeader").style.display="block";
+    document.getElementById("sellHeader").style.display="none";
+    document.getElementById("custView").style.display="block";
+    document.getElementById("sellView").style.display="none";
+    document.getElementById("cityFilter").value=CITIES.includes(u.city)?u.city:"";
+    renderChips();render();
+  } else {
+    document.getElementById("custHeader").style.display="none";
+    document.getElementById("sellHeader").style.display="block";
+    document.getElementById("custView").style.display="none";
+    document.getElementById("sellView").style.display="block";
+    document.getElementById("sellGreet").innerHTML=`Welcome back, ${u.name.split(" ")[0]}.`;
+    renderSellerDash(u);
+  }
+}
+
+/* ---------- customer browse (unchanged logic) ---------- */
+function setCat(x,e){cat=x;document.querySelectorAll(".chip").forEach(a=>a.classList.remove("active"));e.classList.add("active");render()}
+function renderChips(){document.getElementById("chips").innerHTML=cats.map(x=>`<button class="chip ${x===cat?"active":""}" onclick="setCat('${x}',this)">${x}</button>`).join("")}
+function render(){
+  let q=document.getElementById("q").value.toLowerCase(),d=Number(document.getElementById("distance").value)||Infinity,p=Number(document.getElementById("price").value)||Infinity,ct=document.getElementById("cityFilter").value;
+  let list=allWorkers().filter(w=>{let text=(w.n+" "+w.job+" "+w.area+" "+w.skills.join(" ")).toLowerCase();return(cat==="All"||map[cat]===undefined||map[cat].some(x=>w.job.includes(x))||cat==="All")&&(!ct||w.city===ct)&&w.km<=d&&w.price<=p&&(!q||text.includes(q))}).sort((a,b)=>(b.trust-b.km)-(a.trust-a.km));
+  document.getElementById("count").textContent=list.length+" found";
+  document.getElementById("cards").innerHTML=list.length?list.map(card).join(""):`<div class="empty">😕<br><br>No local experts match those filters.<br>Try a wider area or category.</div>`;
+}
+function card(w,mine){return `<div class="card"><div class="profile"><div class="avatar" style="background:${w.color}">${w.n.split(" ").map(x=>x[0]).slice(0,2).join("")}</div><div><div class="name">${w.n} ${w.isNew?'<span class="new">● New</span>':'<span class="verify">✓ Verified</span>'}</div><div class="meta">${w.job}</div><div class="meta">📍 ${w.area} • ${w.km} km away</div></div></div><div class="rating">${w.reviews?`⭐ <b>${w.rating}</b> (${w.reviews})`:'<span class="muted">No reviews yet</span>'} <span class="trustbadge">🛡 ${w.trust}% trust</span></div><div class="tags">${w.skills.map(s=>`<span class="tag">${s}</span>`).join("")}</div><div class="price">₹${w.price}<span> starting price</span></div><div class="actions"><button class="btn secondary" onclick="profile(${w.id})">View profile</button>${mine?"":`<button class="btn primary" onclick="book(${w.id})">Book service</button>`}</div></div>`}
+function profile(id){
+  let w=allWorkers().find(x=>x.id===id);const cu=getUser();const mine=cu&&cu.role==="seller"&&cu.sellerId===w.id;
+  document.getElementById("mc").innerHTML=`<div class="profile"><div class="avatar" style="background:${w.color}">${w.n.split(" ").map(x=>x[0]).slice(0,2).join("")}</div><div><h2>${w.n}</h2><div class="${w.isNew?'new':'verify'}">${w.isNew?'● New on KaamSetu':'✓ Identity + skill profile verified'}</div><div class="meta">${w.job} • 📍 ${w.area}</div></div></div><div class="stats"><div><b>${w.reviews?w.rating+'⭐':'—'}</b>Rating</div><div><b>${w.reviews}</b>Reviews</div><div><b>${w.exp}</b>Experience</div></div><b>Trust profile</b><div class="meta">Identity verification</div><div class="bar"><i style="width:100%"></i></div><div class="meta">Customer satisfaction</div><div class="bar"><i style="width:${w.trust}%"></i></div><p class="meta" style="font-size:13px;line-height:1.6">${w.bio}</p><p><b>Languages:</b> ${w.lang}</p>${w.review?`<p><b>Latest review</b><br><span class="meta">"${w.review}"</span></p>`:""}${mine?"":`<button class="btn primary" style="width:100%" onclick="book(${w.id})">Book this expert</button>`}`;openM();
+}
+function book(id){
+  let w=allWorkers().find(x=>x.id===id);const u=getUser()||{};
+  document.getElementById("mc").innerHTML=`<h2>Book ${w.n}</h2><div class="meta">${w.job} • from ₹${w.price}</div>
+  <input id="cust" placeholder="Your name" value="${u.name||''}">
+  <input id="phone" placeholder="Phone number" value="${u.phone||''}">
+  <textarea id="addr" rows="2" placeholder="Service address / landmark">${(u.locality?u.locality+", ":"")}${u.addr||u.city||''}</textarea>
+  <div class="hint" style="margin:-2px 0 6px">Pulled from your saved profile — edit here just for this booking.</div>
+  <select>${(w.skills||[]).map(s=>`<option>${s}</option>`).join("")}</select>
+  <div class="meta">Choose time</div><div class="slots">${w.times.map(t=>`<span class="slot" onclick="pick(this)">${t}</span>`).join("")}</div>
+  <textarea rows="3" placeholder="Anything the worker should know?"></textarea>
+  <button class="btn primary" style="width:100%;margin-top:10px" onclick="confirmBook('${w.n}')">Confirm booking</button>`;openM();
+}
+function pick(e){document.querySelectorAll(".slot").forEach(x=>x.classList.remove("sel"));e.classList.add("sel")}
+function confirmBook(n){if(!document.getElementById("cust").value.trim()||!document.getElementById("phone").value.trim()){toastMsg("Please enter your name and phone");return}closeM();toastMsg("✓ Booking request sent to "+n+"!")}
+function openM(){document.getElementById("bg").style.display="flex"}function closeM(){document.getElementById("bg").style.display="none"}
+function toastMsg(x){let t=document.getElementById("toast");t.textContent=x;t.style.display="block";setTimeout(()=>t.style.display="none",2600)}
+
+/* ---------- seller dashboard ---------- */
+function renderSellerDash(u){
+  const s=getSellers().find(x=>x.id===u.sellerId)||allWorkers()[0];
+  document.getElementById("sellStatus").textContent="Visible to customers";
+  document.getElementById("sellCardWrap").innerHTML=card(s,true);
+  document.getElementById("stViews").textContent=u.views||0;
+  document.getElementById("stLeads").textContent=u.leads||0;
+  document.getElementById("stTrust").textContent=s.trust+"%";
+}
+function editSeller(){
+  const u=getUser();const s=getSellers().find(x=>x.id===u.sellerId);if(!s)return;
+  document.getElementById("mc").innerHTML=`<h2>Edit my profile</h2>
+  <label class="f">Full name / business name</label><input id="e_name" value="${s.n}">
+  <label class="f">Primary skill / category</label><select id="e_job">${jobOptions.map(j=>`<option ${j===s.job?"selected":""}>${j}</option>`).join("")}</select>
+  <label class="f">City</label><select id="e_city">${CITIES.map(c=>`<option ${c===s.city?"selected":""}>${c}</option>`).join("")}</select>
+  <label class="f">Locality / area</label><input id="e_locality" value="${s.locality||''}">
+  <label class="f">Starting price (₹)</label><input id="e_price" type="number" value="${s.price}">
+  <label class="f">Short bio</label><textarea id="e_bio" rows="3">${s.bio}</textarea>
+  <button class="btn primary" style="width:100%;margin-top:10px" onclick="saveEditSeller()">Save changes</button>`;openM();
+}
+function saveEditSeller(){
+  const u=getUser();let list=getSellers();const i=list.findIndex(x=>x.id===u.sellerId);if(i<0)return;
+  list[i].n=document.getElementById("e_name").value.trim()||list[i].n;
+  list[i].job=document.getElementById("e_job").value;
+  list[i].city=document.getElementById("e_city").value;
+  list[i].locality=document.getElementById("e_locality").value.trim();
+  list[i].area=(list[i].locality?list[i].locality+", ":"")+list[i].city;
+  list[i].price=Number(document.getElementById("e_price").value)||list[i].price;
+  list[i].bio=document.getElementById("e_bio").value.trim()||list[i].bio;
+  list[i].skills=[list[i].job.split(" ")[0]];
+  saveSellers(list);
+  u.name=list[i].n;u.city=list[i].city;u.locality=list[i].locality;saveUser(u);
+  closeM();toastMsg("✓ Profile updated");
+  document.getElementById("whoName").textContent="🛠️ "+u.name.split(" ")[0];
+  renderSellerDash(u);
+}
+
+boot();
+</script></body></html>
